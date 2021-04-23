@@ -230,116 +230,9 @@
         }
       },
       {
-        "type": "VECTOR",
-        "format": "GeoJSON",
-        "name": "points_mapillary",
-        "url": "/api/map/layer_read",
-        "group": "streetlevelqualityLayers",
-        "visible": false,
-        "canEdit": false,
-        "queryable": false,
-        "displayInLayerList": true,
-        "zIndex": 1,
-        "queryParams": ["table_name"],
-        "style": {
-          "format": "geostyler",
-          "url": "./static/layer-styles/styles/points_mapillary.json"
-        }
-      },
-      {
         "type": "VECTORTILE",
         "format": "MVT",
-        "name": "ways_lanes",
-        "url": "/api/map/layer/ways_lanes/{z}/{x}/{y}",
-        "group": "streetlevelqualityLayers",
-        "opacity": 1,
-        "queryable": true,
-        "visible": false,
-        "canEdit": false,
-        "displayInLayerList": false,
-        "zIndex": 1,
-        "maxResolution": 7,
-        "style": {
-          "format": "geostyler",
-          "url": "./static/layer-styles/styles/ways_lanes.json"
-        }
-      },
-      {
-        "type": "VECTORTILE",
-        "format": "MVT",
-        "name": "ways_parking",
-        "url": "/api/map/layer/ways_parking/{z}/{x}/{y}",
-        "group": "streetlevelqualityLayers",
-        "opacity": 1,
-        "queryable": true,
-        "visible": false,
-        "canEdit": false,
-        "displayInLayerList": false,
-        "zIndex": 1,
-        "maxResolution": 7,
-        "style": {
-          "format": "geostyler",
-          "url": "./static/layer-styles/styles/ways_parking.json"
-        }
-      },
-      {
-        "type": "VECTORTILE",
-        "format": "MVT",
-        "name": "ways_category",
-        "url": "/api/map/layer/ways_category/{z}/{x}/{y}",
-        "group": "streetlevelqualityLayers",
-        "opacity": 1,
-        "queryable": true,
-        "visible": false,
-        "canEdit": false,
-        "displayInLayerList": false,
-        "zIndex": 1,
-        "maxResolution": 7,
-        "style": {
-          "format": "geostyler",
-          "url": "./static/layer-styles/styles/ways_category.json"
-        }
-      },
-      {
-        "type": "VECTORTILE",
-        "format": "MVT",
-        "name": "ways_category_aggregated",
-        "url": "/api/map/layer/ways_category_aggregated/{z}/{x}/{y}",
-        "group": "streetlevelqualityLayers",
-        "opacity": 1,
-        "queryable": true,
-        "visible": false,
-        "canEdit": false,
-        "displayInLayerList": false,
-        "zIndex": 1,
-        "maxResolution": 7,
-        "style": {
-          "format": "geostyler",
-          "url": "./static/layer-styles/styles/ways_category_aggregated.json"
-        }
-      },
-      {
-        "type": "VECTORTILE",
-        "format": "MVT",
-        "name": "ways_speed",
-        "url": "/api/map/layer/ways_speed/{z}/{x}/{y}",
-        "group": "streetlevelqualityLayers",
-        "opacity": 1,
-        "queryable": true,
-        "visible": false,
-        "canEdit": false,
-        "displayInLayerList": false,
-        "zIndex": 1,
-        "maxResolution": 7,
-        "style": {
-          "format": "geostyler",
-          "url": "./static/layer-styles/styles/ways_speed.json"
-        }
-      },
-      {
-        "type": "VECTORTILE",
-        "format": "MVT",
-        "name": "street_crossings_osm",
+        "name": "street_crossings",
         "url": "/api/map/layer/street_crossings/{z}/{x}/{y}",
         "group": "streetlevelqualityLayers",
         "opacity": 1,
@@ -361,7 +254,7 @@
       {
         "type": "VECTORTILE",
         "format": "MVT",
-        "name": "street_furniture_osm",
+        "name": "street_furniture",
         "url": "/api/map/layer/street_furniture/{z}/{x}/{y}",
         "group": "streetlevelqualityLayers",
         "opacity": 1,
