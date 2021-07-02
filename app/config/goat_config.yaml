@@ -5,7 +5,11 @@ DATA_SOURCE:
   OSM_DATA_RECENCY: "standard"
   BUFFER_BOUNDING_BOX: 0.045 #in degree (default: approx. 3km)
   EXTRACT_BBOX: "yes" #"yes" ==> Use study area as BBOX,"no_extract" ==> Import whole dump, "done" ==> Extract was already done 
-  
+
+DATA_IMPORT:
+  MANDATORY: ["study_area.shp", "study_area.sql", "study_area.json"]
+  OPTIONAL: ["census.shp", "landuse.shp", "landuse_additional.shp", "buildings_custom.shp"] 
+  SRID: "EPSG:4326"
 
 DATA_REFINEMENT_VARIABLES:
   #extrapolation ==> census.shp + landuse.shp needed as input
@@ -225,7 +229,6 @@ DATA_REFINEMENT_VARIABLES:
     ##----------------------------------------------------------------------------------------------------------##
     ##-----------------------Definition of the weights for the Walkability index -------------------------------##
     ##----------------------------------------------------------------------------------------------------------##
-
     walkability:
       sidewalk_quality: 
         sidewalk_availability: 1
@@ -267,12 +270,3 @@ DATA_REFINEMENT_VARIABLES:
         ##width_street_crossing
         ##marking_street_crossing
         ##orientation
-
-
-
-
-
-
-
-
-      

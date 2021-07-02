@@ -16,8 +16,14 @@ class GoatSetup():
 
         CreateDatabase(ReadYAML()).create_fresh_temp_db()
 
-        #Import custom data
+        #Check Custom data
         data_import = DataImport(ReadYAML(),True,db_conn)
+        data_import.check_study_area()
+        data_import.check_study_area_schema()
+        data_import.check_shp_srid()
+        data_import.check_shp_schema()
+    
+        #Import custom data
         data_import.import_data_folder('/opt/data/')
 
         #Download OSM data
