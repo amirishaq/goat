@@ -165,7 +165,7 @@ class DataImport():
                     return GoatMessages().messages("Converted from {0} => {1}".format(old_srid, self.goat_srid))
             if(study_area_files[0] == 'study_area.sql'):
                     return GoatMessages().messages("info", "SQL File from Study Area Detected.") 
-            if(study_area_files[0] == 'study_area.json'):
+            if(study_area_files[0] == 'study_area.geojson'):
                     return GoatMessages().messages("info", "GeoJSON File from Study Area Detected.") 
         if (len(study_area_files) > 1):
             return GoatMessages().messages("error", "You have more than one study area in supported formats. Please, use only one file")
@@ -178,7 +178,7 @@ class DataImport():
             if (layer.schema['geometry'] == 'Polygon'):
                 for (key) in layer.schema['properties']:
                     if (key == 'name' and layer.schema['properties'][key].split(':')[0] == 'str'):
-                        mandatory_fields.append({key: layer.schema[key]})
+                        mandatory_fields.append({key: layer.schema['properties'][key]})
                     elif (key == 'sum_pop' and layer.schema['properties'][key].split(':')[0] == 'int'):
                         mandatory_fields.append({key: layer.schema['properties'][key]})
             if (len(mandatory_fields) < 2):
@@ -348,7 +348,7 @@ class GoatMessages():
     def messages(self, level, message):
         """
         Custom function to return messages in the user terminal 
-        and also save in log.txt file inside op/data folder
+        and also save in log.txt file inside opt/data folder
         """
         if (level == 'info'):
             logging.info("==== GOAT INFO: {0} ====".format(message))
