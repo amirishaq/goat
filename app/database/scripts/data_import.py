@@ -6,6 +6,7 @@ import json
 import fiona
 import geopandas as gpd
 import logging
+import json
 
 class ReadYAML():
     """Read and return database configuration."""
@@ -121,7 +122,7 @@ class DataImport():
         self.db_name = self.db_conf["DB_NAME"]
         self.user = self.db_conf["USER"]
         self.host = self.db_conf["HOST"]
-        self.folder_files = FileHelper().list_files_dir("/opt/data", ('.shp','.sql','.tif', 'json'))
+        self.folder_files = FileHelper().list_files_dir("/opt/data", ('.shp','.sql','.tif', 'json', 'geojson'))
         self.mandatory_data = self.goat_conf['DATA_IMPORT']['MANDATORY']
         self.optional_data = self.goat_conf['DATA_IMPORT']['OPTIONAL']
         self.goat_srid = self.goat_conf['DATA_IMPORT']['SRID']
@@ -154,7 +155,18 @@ class DataImport():
         if (len(study_area_files) == 1):
             self.study_area = study_area_files[0]
             self.study_area_name = study_area_files[0]
-            if(study_area_files[0] == 'study_area.shp'):
+            if(study_area_files[0].endswith('sql')):
+                return GoatMessages().messages("info", "SQL File from Study Area Detected.") 
+            if(study_area_files[0].endswith(('geojson', 'json'))):
+                GoatMessages().messages("info", "GeoJSON File from Study Area Detected.")
+                with open(study_area_files[0]) as g:
+                    try:
+                        geojson = json.load(g)
+                        if not (geojson["features"][0]["properties"]):
+                            return GoatMessages().messages("error", "There is no properties in the file. Please, update your Study Area File and try again.") 
+                    except ValueError as e:
+                        return GoatMessages().messages("error", "Your GeoJSON is not formatted correctly. Please, update your Study Area File and try again.") 
+            if(study_area_files[0].endswith('.shp')):
                 self.study_area = gpd.read_file(study_area_files[0])
                 if(str(self.study_area.crs).split(':')[1] == '4326'):
                     return GoatMessages().messages("info", "{0} detected. Continue.".format(self.study_area.crs)) 
@@ -187,6 +199,14 @@ class DataImport():
                 return GoatMessages().messages("info", "Field validation passed.")
             else: 
                 return GoatMessages().messages("error", "Geometry type: {0}. Please use a shapefile with Polygon geometry type".format(layer.schema['geometry']))
+        if(self.study_area_name.endswith(('.geojson', 'json'))):
+            with open(self.study_area_name) as g:
+                geojson = json.load(g)
+                if (("name"  and "sum_pop") in geojson["features"][0]["properties"]):
+                    if (type(geojson["features"][0]["properties"]["name"]) == str and type(geojson["features"][0]["properties"]["sum_pop"]) == int):
+                        return GoatMessages().messages("info", "You GeoJSON file has the right attributes. The process will continue.") 
+                else:
+                    return GoatMessages().messages("error", "Your properties are incomplete. Please, update your Study Area File and try again.") 
 
     def check_shp_srid(self):
         os.chdir('/opt/data')
@@ -234,23 +254,6 @@ class DataImport():
             GoatMessages().messages("warning", "Your land use shapefile do not have all mandatory fields.")
         else: 
             GoatMessages().messages("info", "All optional shapefiles has the right fields structure.")
-
-        
-                
-            # layer = fiona.open(self.study_area_name)
-            # mandatory_fields = []
-            # if (layer.schema['geometry'] == 'Polygon'):
-            #     for (key) in layer.schema['properties']:
-            #         if (key == 'name' and layer.schema[key].split(':')[0] == 'str'):
-            #             mandatory_fields.append({key: layer.schema[key]})
-            #         elif (key == 'sum_pop' and layer.schema[key].split(':')[0] == 'int'):
-            #             mandatory_fields.append({key: layer.schema[key]})
-            # if (len(mandatory_fields) < 2):
-            #     return GoatMessages().messages("error", "Please, check the name from shapefile fields")
-            # if (len(mandatory_fields) >= 2):
-            #     return GoatMessages().messages("info", "Field validation passed.")
-            # else: 
-            #     return GoatMessages().messages("error", "Geometry type: {0}. Please use a shapefile with Polygon geometry type".format(layer.schema['geometry']))
 
 
     def prepare_planet_osm(self):
