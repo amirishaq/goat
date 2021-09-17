@@ -239,20 +239,18 @@ class DataImport():
                 for (key) in layer.schema['properties']:
                     if (key == 'id' and layer.schema['properties'][key].split(':')[0] == 'str'):
                         census_mandatory_fields.append({key: layer.schema['properties'][key]})
-                    if (key == 'demography' and layer.schema['properties'][key].split(':')[0] == 'str'):
-                        census_mandatory_fields.append({key: layer.schema['properties'][key]})
                     if (key == 'pop' and layer.schema['properties'][key].split(':')[0] == 'int'):
                         census_mandatory_fields.append({key: layer.schema['properties'][key]})
             if (shp == 'landuse.shp'):
                 for (key) in layer.schema['properties']:
                     if (key == 'landuse' and layer.schema['properties'][key].split(':')[0] == 'str'):
                         landuse_mandatory_fields.append({key: layer.schema['properties'][key]})
-        if (len(census_mandatory_fields) < 3):
+        if (len(census_mandatory_fields) < 2):
             GoatMessages().messages("warning", "Your census shapefile do not have all mandatory fields.")
         elif (len(landuse_mandatory_fields) < 1):
             GoatMessages().messages("warning", "Your land use shapefile do not have all mandatory fields.")
         else: 
-            GoatMessages().messages("info", "All optional shapefiles has the right fields structure.")
+            GoatMessages().messages("info", "All optional shapefiles have the right fields structure.")
 
 
     def prepare_planet_osm(self):
