@@ -1,0 +1,100 @@
+version: "3.7"
+
+networks:
+  proxy:
+
+volumes:
+  postgres_data:
+
+services:
+  traefik:
+    image: "traefik:1.7.2-alpine"
+    container_name: "traefik"
+    ports:
+      - "80:80" # - Default Port
+      - "443:443" # - SSL Port
+      - "31951:31951" # - Mapproxy
+      - "8000:8000" # - Traefik UI
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./app/config/traefik.toml:/etc/traefik/traefik.toml
+      - ./app/config/ssl:/ssl
+    labels:
+      - "traefik.backend=traefik"
+      - "traefik.frontend.entryPoints=traefik-ui"
+      - "traefik.frontend.rule=Host:localhost;"
+      - "traefik.port=8080"
+      - "traefik.enable=true"
+    networks:
+      proxy:
+
+  client:
+    build:
+      dockerfile: Dockerfile
+      context: ./app/client
+    image: goat-client
+    volumes:
+      - /app/node_modules
+      - ./app/client:/app
+    container_name: goat-client
+    labels:
+      - "traefik.backend=client"
+      - "traefik.frontend.entryPoints=https,http"
+      - "traefik.frontend.rule=Host:localhost;"
+      - "traefik.port=80"
+      - "traefik.enable=true"
+    networks:
+      proxy:
+
+  api:
+    build:
+      context: ./app/api
+    ports:
+      - 3000:3000
+    env_file:
+      - ./app/config/docker-env/api.env
+    volumes:
+      - ./app/api:/usr/src/app
+    labels:
+      - "traefik.backend=api-flask"
+      - "traefik.frontend.entryPoints=https,http"
+      - "traefik.frontend.rule=Host:localhost;PathPrefix:/api"
+      - "traefik.port=3000"
+      - "traefik.enable=true"
+    networks:
+      proxy:
+
+
+  db: 
+    image: goatcommunity/database:test-release
+    container_name: goat-database
+    restart: on-failure
+    volumes:
+      # we are mounting a named volume here instead of a data directory path because of
+      # a windows 10 premission issue. See https://github.com/docker-library/postgres/issues/435)
+      # .........
+      - postgres_data:/var/lib/postgresql
+      - ./app/database:/opt
+      - ./app/api/src/db:/opt/scripts/db
+      - ./app/config:/opt/config
+    env_file:
+      - ./app/config/docker-env/db.env
+    ports:
+      - "65432:5432"
+    networks:
+      proxy:
+        
+  #This container is used for running cron jobs. It is mainly for production purposes.
+  # cron:
+  #   build:
+  #     dockerfile: ./cron/Dockerfile
+  #     context: ./app
+  #   image: goat-cron
+  #   volumes:
+  #     - ./app/database:/opt
+  #     - ./app/config:/opt/config
+  #   container_name: goat-cron
+  #   env_file:
+  #     - ./app/config/docker-env/db.env
+  #   networks:
+  #     proxy:

@@ -1,0 +1,886 @@
+{
+  "appTitle": "GOAT",
+  "buttonLabels": {
+    "yes": "Yes",
+    "cancel": "Cancel",
+    "save": "Save",
+    "ok": "Ok",
+    "remove": "Remove",
+    "stop": "Stop"
+  },
+  "textFieldRules": {
+    "greaterThanZero": "Value should be greater than 0",
+    "smallerThanThousand": "Value should be smaller than 1000",
+    "onlyTwoDecimalPlaces": "Only 2 decimal places are allowed"
+  },
+  "appBar": {
+    "buttons": {
+      "login": "Login",
+      "print": "Print",
+      "drawAndMeasure": "Measure",
+      "filter": "Thematic Data Filter",
+      "edit": "Draw scenario",
+      "settings": "Language",
+      "info": "Visit GOAT Homepage",
+      "osmMapMode": "OSM Map Mode",
+      "about": "About"
+    },
+    "login": {
+      "title": "Login",
+      "form": {
+        "username": {
+          "label": "Username",
+          "rule": "Username is required"
+        },
+        "password": {
+          "label": "Password",
+          "rule": "Password is required"
+        },
+        "submit": "Login"
+      }
+    },
+    "printMap": {
+      "title": "Print Map",
+      "connectionMsg": "Connecting to the print server, please wait...",
+      "unavailableMsg": "The print server is unavailable. Please, try later....",
+      "form": {
+        "title": {
+          "label": "Title",
+          "rule": "Field is required"
+        },
+        "layout": {
+          "label": "Layout",
+          "rule": "Field is required"
+        },
+        "scale": {
+          "label": "Scale",
+          "rule": "Field is required"
+        },
+        "resolution": {
+          "label": "Resolution",
+          "rule": "Field is required"
+        },
+        "crs": {
+          "label": "Reference System",
+          "rule": "Field is required"
+        },
+        "outputFormat": {
+          "label": "Output Format",
+          "rule": "Field is required"
+        },
+        "submit": "Print",
+        "abort": "Abort",
+        "legend": "Legend",
+        "grid": "Grid"
+      }
+    },
+    "drawAndMeasure": {
+      "title": "Measure",
+      "measure": {
+        "header": "Measure",
+        "length": "Length",
+        "area": "Area"
+      },
+      "draw": {
+        "header": "Draw",
+        "point": "Point",
+        "pointWithCoord": "Point with coordinates",
+        "line": "Line",
+        "polygon": "Polygon",
+        "label": "Label",
+        "color": "Color",
+        "transparency": "Transparency"
+      },
+      "clear": "Clear"
+    },
+    "filter": {
+      "title": "Thematic Data Filter",
+      "poisSettings": {
+        "buttonTooltip": "Weight and Sensitivity Settings",
+        "title": "Heatmap",
+        "selectWeight": "Select Weight",
+        "sensitivityIndex": "Sensitivity index",
+        "sensitivityGraph": {
+          "title": "Accessibility",
+          "gravity": "Accessibility Gravity (%)",
+          "travelTime": "Traveltime (minutes)"
+        }
+      }
+    },
+    "edit": {
+      "title": "Draw scenario",
+      "createScenario": "Create Scenario",
+      "editScenarioName": "Update Scenario",
+      "scenario": "Scenario",
+      "scenarioImportExport": "Scenario Import/Export",
+      "selectLayer": "Select Layer",
+      "layerToEdit": "Layer to edit",
+      "selectFeatures": "Select features",
+      "drawCircle": "Draw a circle to select features",
+      "selectOnMap": "Select features on map",
+      "editTools": "Edit Tools",
+      "drawFeatureTooltip": "Draw Feature",
+      "addBldEntrance": "Add Building Entrance",
+      "modifyFeatureTooltip": "Modify Geometry",
+      "deleteFeature": "Delete Feature",
+      "moveFeature": "Move Feature",
+      "modifyAttributes": "Modify Attributes",
+      "drawPolygonHole": "Draw Polygon Hole",
+      "snapGuide": "Snap Guide",
+      "featureLabels": "Feature Labels",
+      "clearBtn": "Revert All",
+      "uploadBtn": "Upload",
+      "addEntrancesForBuildings": "Add entrances for all buildings to activate <b>UPLOAD</b>",
+      "popup": {
+        "deleteFeatureMsg": "Are you sure you want to delete the selected feature ?",
+        "selectWayType": "Select way type: ",
+        "wayType": "Way Type"
+      },
+      "table": {
+        "layer": "Layer",
+        "status": "Status",
+        "type": "Type",
+        "actions": "Actions"
+      },
+      "type": {
+        "New": "New",
+        "Modified": "Modified",
+        "Restored": "Restored",
+        "deleted": "Deleted"
+      },
+      "status": {
+        "Uploaded": "Uploaded",
+        "NotUploaded": "Not Uploaded"
+      },
+      "activateLayerToDrawScenario": "Please activate the layer to be able to select features",
+      "dataTypeInfo": "Data type should be",
+      "geometryTypeInfo": "Geometry type should be",
+      "requiredFields": "Required Fields",
+      "referenceSystemInfo": "Reference sytem should be in",
+      "featuresNotyetUploaded": "Features not yet uploaded. Click upload button to commit",
+      "differentGeometryType": "Geometries doesn't match",
+      "missingFields": "Missing Fields",
+      "fileCorrupted": "Geojson file is corrupted",
+      "noFile": "No file",
+      "allFeaturesUploaded": "All Features Inserted",
+      "notAllUploaded": "Not all features uploaded",
+      "errorHappened": "An error happened",
+      "scenarioFeatures": "Scenario Features",
+      "uploadYourData": "Upload your data",
+      "deleteAllTitle": "Delete All",
+      "deleteAllMessage": "Are you sure you want to delete all scenario data."
+    },
+    "settings": {
+      "title": "Settings",
+      "language": "Language",
+      "units": {
+        "header": "Units",
+        "km": "Kilometers",
+        "miles": "Miles"
+      }
+    },
+    "about": {
+      "title": "About GOAT",
+      "whatIs": "<span><strong>What is GOAT?</strong></span>\n<p>Geo Open Accessibility Tool, or simply GOAT, is a planning support system to shape active mobility and local accessibility.  It excels with its high flexibility and interactivty. Accordingly, it is possible to dynamically develop scenarios and evaluate its effects on accessibility. </p> The application is developed as Open source project mainly by the Startup <a href=\"https://plan4better.de\">Plan4Better</a> and <a href=\"https://www.bgu.tum.de/sv/startseite/\">Technical University of Munich</a>. Frequently new features are implemented and new data sources are added. The underlying version is a demo version and by no means any liability is taken for the correctness of the presented analysis.</p>",
+      "usedData": "<span><strong>Used Data</strong></span><p>GOAT uses mainly Open Data. The following data sets are either displayed in the different layers or used in the background to perform the analysis:&nbsp;</p>",
+      "license": "<span><strong>Licence</strong></span>\n<p>GOAT is licensed under <a href=\"https://github.com/goat-community/goat/blob/main/LICENSE\">GPL-3.0</a><br /><span>If you use GOAT for your analysis, please cite it as:&nbsp;</span><br /><span><strong>Geo Open Accessibility Tool - GOAT(Version 1.0.1) [Webtool]. Retrieved from&nbsp;<a  href=\"https://open-accessibility.org\" rel=\"nofollow\">https://open-accessibility.org</a></strong></span></p>\n",
+      "moreInfo": "More Info",
+      "layerAttributeTable": {
+        "data": "Layers",
+        "source": "Source",
+        "yearTimestamp": "Year / Timestamp"
+      }
+    },
+    "documentation": {
+      "title": "Documentation",
+      "openInNewTab": "Open in new tab"
+    },
+    "stylePanel": {
+      "selectAttribute": "Select Attribute",
+      "fillColor": "Fill Color",
+      "outlineColorAndWidth": "Outline color & width"
+    } 
+  },
+  "isochrones": {
+    "title": "Isochrones",
+    "calculation": "Calculation",
+    "calculationTitle": "Isochrone Calculation",
+    "stopIsochroneCalc": "Stop Calculation",
+    "mode": {
+      "default": "Default",
+      "input": "Input"
+    },
+    "single": {
+      "title": "Starting Point",
+      "type": "Single",
+      "searchBox": "Search Starting Point",
+      "startTooltip": "Click on button to start Isochrone calculation.",
+      "ppfTooltip": "Click on button to start PPF calculation.",
+      "tableDataTitle": "Thematic Data"
+    },
+    "multiple": {
+      "title": "Start",
+      "type": "Multiple",
+      "selectMethod": "Select Method",
+      "studyArea": "Study Area",
+      "clear": "Clear",
+      "calculate": "Calculate",
+      "studyAreaInfoLabel": "Select <b>study area</b> on the map and <b>points of interest</b> from the thematic data filter to enable calculation.",
+      "drawPolygon": "Draw Polygon",
+      "amenityCount": "Amenity Count",
+      "limit": "Limit",
+      "drawPolygonInfoLabel": "Draw <b>polygon</b> on the map and select <b>points of interest</b> from the thematic data filter to enable calculation.",
+      "tableDataTitle": "Multi-Isochrone Data"
+    },
+    "options": {
+      "title": "Options",
+      "subOptions": "Isochrone Settings",
+      "speed": "km/h",
+      "time": "min",
+      "nr": "Isochrones",
+      "calcType": "Level of detail isochrones",
+      "calcModus": "Calculation Mode",
+      "alphaShapeMode": "Level of detail isochrones",
+      "defaultNetwork": "Default",
+      "modifiedNetwork": "Scenario",
+      "modifiedNetworkDoubleCalc": "Comparison",
+      "routingProfile": "Routing Profile",
+      "walking_standard": "Standard",
+      "walking_elderly": "Elderly",
+      "walking_safe_night": "Safe night",
+      "walking_wheelchair": "Wheelchair",
+      "walking_wheelchair_standard": "Standard",
+      "walking_wheelchair_electric": "Electric",
+      "cycling_standard": "Standard",
+      "cycling_pedelec": "Pedelec"
+    },
+    "results": {
+      "title": "Results",
+      "multiIsochroneHeader": "Multi-Isochrone Calculation",
+      "additionalLayers": "Additional Layers",
+      "showDataTooltip": "Show Data",
+      "hideDataTooltip": "Hide Data",
+      "toggleVisibilityTooltip": "Toggle Visibility",
+      "showResultsTooltip": "Show Results",
+      "hideResultsTooltip": "Hide Results",
+      "downloadTooltip": "Download",
+      "deleteCalcTooltip": "Delete Calculation",
+      "deleteAll": "DELETE ALL",
+      "changeColorTooltip": "Click to change color",
+      "table": {
+        "type": "Type",
+        "range": "Range",
+        "area": "Area",
+        "visible": "Visible",
+        "legend": "Legend"
+      },
+      "colorMessage": "Lowest: <b>0 min</b>, Highest: <b>20 min</b>"
+    },
+    "tableData": {
+      "timeFilter": "Time filter",
+      "searchPois": "Search Point of Interest",
+      "selectTimeMsg": "Select travel time to filter",
+      "noDataMsg": "No data for the selected time",
+      "selectAmenitiesMsg": "Select <b>Points of Interest</b> to filter the table.",
+      "table": {
+        "pois": "Point of Interest",
+        "isochrone": "Isochrone",
+        "studyArea": "Study Area",
+        "population": "Population",
+        "reachedPopulation": "Reached Population",
+        "shared": "Share"
+      }
+    },
+    "isochrones": "Isochrones",
+    "deleteTitle": "Delete",
+    "deleteMessage": "Are you sure you want to delete calculation",
+    "deleteAllMessage": "Are you sure you want to delete all calculations ?",
+    "download": {
+      "title": "Download Isochrones",
+      "fileName": "Filename",
+      "outputFormat": "Choose output format",
+      "download": "Download"
+    },
+    "additionalLayers": {
+      "defaultNetwork": "Default Road Network",
+      "inputNetwork": "Input Road Network",
+      "studyArea": "Study Area",
+      "startingPoints": "Starting Points"
+    },
+    "pickColor": {
+      "title": "Isochrone Color"
+    }
+  },
+  "poisFilter": {
+    "showTimeFilter": "Add time filter",
+    "selectHourLabel": "Select open time to filter",
+    "selectDayLabel": "Select day",
+    "daysOfWeek": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    }
+  },
+  "layerTree": {
+    "title": "Layers",
+    "settings": {
+      "transparency": "Transparency"
+    }
+  },
+  "map": {
+    "layerLegend": {
+      "title": "Layers Legend"
+    },
+    "snackbarMessages": {
+      "selectAmenities": "You must select at least one point of interest (Thematic Data)",
+      "selectAois": "You must select at least one area of interest (Thematic Data)",
+      "calculateIsochroneError": "Sorry but here no calculation is possible",
+      "calculateIsochroneCancelled": "Isochrone Calculation Cancelled",
+      "calculatePPFCancelled": "PPF Calculation Cancelled",
+      "uploadScenarioSuccess": "Features uploads successfully.",
+      "uploadScenarioError": "Sorry, an error happened while uploading the features in database.",
+      "notAllScnearioFeaturesUploaded": "The isochrone scenario calculation will not take in account not uploaded features.",
+      "cantDeleteAllScenarioFeatures": "Sorry. Scenario data can't be deleted at the moment.",
+      "allScenarioFeaturesDelete": "All Scenario Data is deleted",
+      "noScenarioFeatureChangeAvailable": "Please do network or land-use change first",
+      "cantPrintBaseLayer": "This baselayer can't be printed",
+      "featuresAlreadyUploaded": "Features already exists",
+      "cantExportScenario": "An error happened. Scenario can't be exported!",
+      "zoomInToShowFeatures": "Zoom in to show features for",
+      "heatmapIsBusy": "Recomputing for heatmap layer might take some time. Please be patient!"
+    },
+    "layerGroup": {
+      "poisLayers": "Point of Interest",
+      "buildings_landuse": "Buildings and Land Use",
+      "administrativeLayers": "Administrative boundaries",
+      "streetlevelqualityLayers": "Street Level Quality",
+      "environmentalQualityLayers": "Environmental data",
+      "perceivedQuality": "Perceived Quality",
+      "additionalDataLayers": "Additional data",
+      "accessbilityBasemaps": "Heatmaps",
+      "backgroundLayers": "Background Layers",
+      "buildings": "Buildings",
+      "mobility_patterns": "Mobility Patterns"
+    },
+    "layerName": {
+      "pois": "Point of Interest",
+      "aois": "Areas of Interest",
+      "administrativeUnits": "Administrative Units",
+      "accidents_pedestrians": "Pedestrians - Accident Points (2016-2019)",
+      "accidents_pedestrian_2018": "Pedestrians - Accidents Frequencies (2018)",
+      "accidents_pedestrian_2017": "Pedestrians - Accidents Frequencies (2017)",
+      "accidents_cyclists": "Cyclists - Accident Points (2016-2019)",
+      "accidents_bike_2018": "Cyclists - Accidents Frequencies (2018)",
+      "accidents_bike_2017": "Cyclists - Accidents Frequencies (2017)",
+      "bicycle_counting_stations": "Bike Counting (2019)",
+      "biotops": "Biotops",
+      "ffh-area": "FFH Area",
+      "natureReserves": "Nature Reserves",
+      "noiseMainTrafficRoads": "Noise levels - main roads",
+      "waterProtectionArea": "Drinking Water Protection Areas",
+      "floodingAreasHQ100": "Flooding Areas (100-year flood)",
+      "dikes": "Dikes",
+      "protectedLandscape": "Protected Landscape Areas",
+      "landuse": "Landuse",
+      "landuse_osm": "Landuse (OSM)",
+      "zoningPlan": "Zoning Plan",
+      "footpath_width": "Footpath Width",
+      "ways_lit": "Illuminance",
+      "ways_lanes": "Lanes",
+      "modeshare": "Mode share",
+      "noiseAircraftLDEN": "Aircraft noise - Level LDEN",
+      "noiseAircraftLNight": "Aircraft noise - Level LNight",
+      "noiseProtectionBauleitplanung": "Noise protection area for urban land use planning",
+      "ways_parking": "Parking",
+      "ways_smoothness": "Smoothness",
+      "ways_speed": "Speed",
+      "ways_category": "Street Categories Detailed",
+      "ways_category_aggregated": "Street Categories",
+      "street_crossings": "Street Crossings",
+      "street_furniture": "Street Furniture",
+      "street_furniture_bicycles": "Bicycle Rack",
+      "munichways": "Cycleway Quality (Munichways)",
+      "ways_surface": "Surface",
+      "ways_wheelchair": "Wheelchair Usability",
+      "footpath_visualization": "Walkability Index",
+      "ways_green_blue_index": "Green- and Blueindex",
+      "ways_liveliness": "Walking Environment",
+      "ways_urban_equipment": "Urban Equipment",
+      "ways_traffic_protection": "Traffic Protection",
+      "ways_security": "Illuminance",
+      "ways_sidewalk_quality": "Gehkomfort",
+      "heatmap_connectivity": "Connectivity",
+      "heatmap_luptai": "Comparison of Accessibility and Population Density",
+      "heatmap_population": "Population Density",
+      "heatmap_gravity": "Local Accessibility",
+      "primary_school_streams": "Potential Pedestrian Flows to Primary Schools",
+      "studyArea": "Study Area",
+      "ways": "Ways",
+      "buildings": "Buildings",
+      "osmStandard": "OSM Standard",
+      "osmLight": "OSM Light",
+      "osmDark": "OSM Dark",
+      "openTopoMap": "Open Topo Map",
+      "mapboxStreets": "Mapbox",
+      "publicTransport": "Public Transport",
+      "bingAerial": "Bing Aerial",
+      "walking_trip_rate": "Walking trips per person",
+      "walkingShare": "Share of walking trips",
+      "cyclingShare": "Share of cycling trips",
+      "bicycle_rate": "Bicycle ownership",
+      "motorization_rate": "Motorized vehicles ownership",
+      "population_strata": "Population per strata",
+      "transmilenioShare": "Share of Transmilenio trips",
+      "sitpShare": "Share of SITP trips",
+      "cycling_trips_rate": "Cycling trips per person",
+      "pt_trips_rate": "Public transport trips per person",
+      "strata": "Strata",
+      "indicators": "Indicators",
+      "study_area_crop": "Study area",
+      "study_area": "Districts",
+      "ways_Project_Sidewalk": "Project Sidewalk Score"
+    },
+    "tooltips": {
+      "clickForIsochroneCalculation": "Click for isochrone calculation. Press ESC to exit",
+      "clickForPPFCalculation": "Click for PPF calculation. Press ESC to exit",
+      "clickToSelectStudyArea": "Click to select the study area. Press ESC to exit",
+      "maxCircleRadius": "Maximum circle radius is 1000 m",
+      "clickToStartMeasure": "Click to start measuring. Press ESC to exit",
+      "clickToStartDrawing": "Click to start drawing. Press ESC to exit",
+      "clickToContinueDrawing": "Click to continue drawing",
+      "clickToFinishDrawing": "Click to finish drawing",
+      "clickToStartDrawingBoundary": "Click to start drawing the boundary. <br> Press ESC to exit",
+      "clickToStartDrawingCircle": "Click to start drawing the circle (Max Radius 1000 m). <br> Press ESC to exit",
+      "clickToStartDrawingPolygon": "Click to start drawing polygon.",
+      "clickToFinishDrawingPolygon": "Double-click or click starting point to finish.",
+      "clickOnFeatureToDelete": "Click on feature to delete it",
+      "clickOnFeatureToMove": "Click and drag the feature to move",
+      "drawHoleOnPolygon": "Draw over the polygon to create a hole",
+      "drawHoleOnPolygonNotAllowed": "Draw hole over a new drawn building",
+      "clickAndDragToModify": "Click and drag the features to modify geometry",
+      "clickToModifyAttributes": "Click to modify attributes",
+      "clickToRemove": "Click to remove it",
+      "clickToPlacePoint": "Click to place the point",
+      "changeDefaultColorPalette": "Change color (default)",
+      "changeScenarioColorPalette": "Change color (scenario)",
+      "clickToBldEntrance": "Click building to add entrance <br>Click and drag to modify <br>Right-click on feature to delete",
+      "clickToBldEntranceNotAllowed": "Can't add an entrance here. Click on a new drawn building.",
+      "moveExistingBuildingNotAllowed": "Hover on a new drawn building to activate move function",
+      "modifyExistingBuildingNotAllowed": "Hover on a new drawn building to activate modify function",
+      "openDocumentation": "Open Documentation",
+      "routingProfiles": {
+        "walking": {
+          "title": "Walking",
+          "options": {
+            "standard": {
+              "title": "Standard",
+              "tooltip": "Default routing"
+            },
+            "elderly": {
+              "title": "Elderly",
+              "tooltip": "Routing with reduced walking speed"
+            },
+            "safe_night": {
+              "title": "Safe night",
+              "tooltip": "Routing excluding unlit paths"
+            }
+          }
+        },
+        "cycling": {
+          "title": "Cycling",
+          "options": {
+            "standard": {
+              "title": "Standard",
+              "tooltip": "Default Routing"
+            },
+            "pedelec": {
+              "title": "Pedelec",
+              "tooltip": "Pedelec"
+            }
+          }
+        },
+        "walking_wheelchair": {
+          "title": "Wheelchair",
+          "options": {
+            "standard": {
+              "title": "Standard",
+              "tooltip": "Default Routing"
+            },
+            "electric": {
+              "title": "Electric",
+              "tooltip": "Electric"
+            }
+          }
+        }
+      },
+      "zoomToFeature": "Zoom to feature",
+      "deleteFeature": "Delete Feature",
+      "uploadFeature": "Upload Feature",
+      "restoreFeature": "Restore Feature",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "openFullScreen": "Open Fullscreen",
+      "exitFullScreen": "Exit Fullscreen",
+      "toggleStreetView": "Mapillary Imagery"
+    },
+    "popup": {
+      "attributes": "Attributes",
+      "info": "Info",
+      "editWithOsm": "Edit with OSM",
+      "confirm": "Confirm",
+      "modifyAttributes": "Modify Attributes"
+    },
+    "layerListValues": {
+      "road": "Road",
+      "bridge": "Bridge"
+    },
+    "contextMenu": {
+      "deleteIsochrone": "Delete Isochrone",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "deleteBldEntrancePoint": "Delete Population",
+      "deletePPFNetwork": "Delete",
+      "redoCalculation": "Redo Calculation"
+    },
+    "osmMode": {
+      "tasks": "OSM Mapping Tasks",
+      "steps": "Steps",
+      "info": "Info",
+
+      "stepsDesc": {
+        "clickFeatureInMap": "Click on a object in the map.",
+        "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+        "fillInOSMiD": "Add the missing {missingVar} in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example the mapillary images can be used. "
+      },
+      "note": "Note: the {layerNameVar} layer is updated every 10 minutes",
+      "shortDesc": "Complete the missing {missingVar}",
+      "longDesc": "Check out {layerNameVar} for missing {missingVar}.",
+      "layers": {
+        "mapping_pois_opening_hours": {
+          "missingKeyWord": "Opening Hours",
+          "layerName": "POIs",
+          "stepsDesc": {
+            "clickFeatureInMap": "The displayed icons in the map are the challenges. Select one of them.",
+            "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+            "fillInOSMiD": "Add to the POIs the missing tag 'opening_hours' in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example, the website of the amenity can be viewed or an on-site visit can be made."
+          }
+        },
+        "osm-mapping-ways-speed": {
+          "missingKeyWord": "Maxspeed",
+          "layerName": "Ways",
+          "stepsDesc": {
+            "clickFeatureInMap": "The blue lines on the map are the challenges. Select one of them.",
+            "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+            "fillInOSMiD": "Add to the ways the missing tag 'maxspeed' in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example, mapillary images can be used or an on-site visit can be made. "
+          }
+        },
+        "osm-mapping-ways-surface": {
+          "missingKeyWord": "Surface Type",
+          "layerName": "Ways",
+          "stepsDesc": {
+            "clickFeatureInMap": "The blue lines on the map are the challenges. Select one of them.",
+            "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+            "fillInOSMiD": "Add to the ways the missing tag 'surface' in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example, mapillary images can be used or an on-site visit can be made. "
+          }
+        },
+        "osm-mapping-cycleways-width": {
+          "missingKeyWord": "Cycleway Width",
+          "layerName": "Ways",
+          "stepsDesc": {
+            "clickFeatureInMap": "The blue lines on the map are the challenges. Select one of them.",
+            "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+            "fillInOSMiD": "Add to the ways the missing tag 'width' in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example, mapillary images can be used or an on-site visit can be made. "
+          }
+        },
+        "osm-mapping-cycleways-segregated": {
+          "missingKeyWord": "Cycleway Segregated",
+          "layerName": "Ways",
+          "stepsDesc": {
+            "clickFeatureInMap": "The blue lines on the map are the challenges. Select one of them.",
+            "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+            "fillInOSMiD": "Add the missing tag 'segregated' in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example, mapillary images can be used or an on-site visit can be made. "
+          }
+        },
+        "osm-mapping-ways-wheelchair": {
+          "missingKeyWord": "Wheelchair Usability",
+          "layerName": "Ways"
+        },
+        "osm-mapping-buildings-type": {
+          "missingKeyWord": "Building Type",
+          "layerName": "Buildings",
+          "stepsDesc": {
+            "clickFeatureInMap": "The blue lines on the map are the challenges. Select one of them.",
+            "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+            "fillInOSMiD": "Edit the tag 'building' in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example, mapillary and aerial images can be used or an on-site visit can be made. "
+          }
+        },
+        "osm-mapping-parking-lane": {
+          "missingKeyWord": "Parking lane",
+          "layerName": "Parking lanes",
+          "stepsDesc": {
+            "clickFeatureInMap": "The blue lines on the map are the challenges. Select one of them.",
+            "clickEditWithOsm": "By clicking on the <b>'Edit with OSM'</b> link, you will be forwarded to the OSM iD-Editor.",
+            "fillInOSMiD": "Add the tag 'parking:lane:both' or 'parking:lane:left' and/or 'parking:lane:right' in the OSM editor according to the guidelines of the OSM wiki. To retrieve the missing information, for example, mapillary and aerial images can be used or an on-site visit can be made. "
+          }
+        }
+      },
+
+      "dialogMessage": {
+        "title": "OSM Mapping Mode",
+        "body": "Welcome to the OSM mapping mode! In this mode, you can improve GOAT data by contributing to OpenStreetMap (OSM). We have set up different tasks for objects with missing information, which can be completed using the iD-Editor or other OSM editors such as JOSM. Please familiarize yourself with the general mapping rules and the corresponding content of the OSM wiki for the objects you want to edit. Furthermore, you can find a tutorial on mapping in OSM on the GOAT website. Thanks for contributing to the world of open data!"
+      }
+    }
+  },
+  "pois": {
+    "education": "Education",
+    "foodAndDrink": "Food and Drink",
+    "transport": "Transport",
+    "mobilitystations": "Mobility Stations",
+    "services": "Services",
+    "shop": "Shop",
+    "tourismAndLeisure": "Tourism & Leisure",
+    "nursery": "Nursery",
+    "kindergarten": "Kindergarten",
+    "primary_school": "Primary school",
+    "secondary_school": "Secondary school",
+    "gymnasium": "Gymnasium",
+    "grundschule": "Grundschule",
+    "realschule": "Realschule",
+    "hauptschule_mittelschule": "Haupt-/Mittelschule",
+    "werkrealschule": "Werkrealschule",
+    "school": "School",
+    "library": "Library",
+    "bar": "Bar",
+    "biergarten": "Biergarten",
+    "cafe": "Café",
+    "pub": "Pub",
+    "fast_food": "Fast Food",
+    "ice_cream": "Ice Cream",
+    "restaurant": "Restaurant",
+    "nightclub": "Night-Club",
+    "bicycle_rental": "Bike sharing",
+    "cargo_bike": "Cargo bike",
+    "car_sharing": "Car sharing",
+    "charging_station": "Charging station",
+    "bus_stop": "Bus",
+    "tram_stop": "Tram Stop",
+    "transmicable": "Transmicable",
+    "subway_entrance": "U-Bahn station",
+    "sitp": "SITP",
+    "transmilenio": "Transmilenio",
+    "rail_station": "Rail Station",
+    "taxi": "Taxi",
+    "bikesharing_ffb": "Bikesharing-Stations",
+    "carsharing_ffb": "Carsharing-Stations",
+    "charging_station_marker_ffb": "E-Charging Station privat",
+    "charging_station_other_ffb": "E-Charging Station privat (under construction)",
+    "charging_station_public_ffb": "E-Charging Station public",
+    "e_parking_ffb": "E-Parking",
+    "l-station_ffb": "L-Station Prio 1",
+    "s-station_prio1_ffb": "S-Station Prio 1",
+    "s-station_prio2_ffb": "S-Station Prio 2",
+    "hairdresser": "Hairdresser",
+    "atm": "ATM",
+    "bank": "Bank",
+    "dentist": "Dentist",
+    "doctors": "Doctor",
+    "pharmacy": "Pharmacy",
+    "post_box": "Post box",
+    "fuel": "Fuel",
+    "recycling": "Recycling",
+    "bakery": "Bakery",
+    "butcher": "Butcher",
+    "clothes": "Clothing store",
+    "convenience": "Convenience store",
+    "greengrocer": "Greengrocer",
+    "kiosk": "Kiosk",
+    "mall": "Mall",
+    "shoes": "Shoes",
+    "supermarket": "Supermarket",
+    "discount_supermarket": "Discount Supermarket",
+    "international_supermarket": "International Supermarket",
+    "hypermarket": "Hypermarket",
+    "chemist": "Chemist",
+    "organic": "Organic Food",
+    "marketplace": "Marketplace",
+    "cinema": "Cinema",
+    "theatre": "Theatre",
+    "museum": "Museum",
+    "hotel": "Hotel",
+    "hostel": "Hostel",
+    "guest_house": "Guest house",
+    "gallery": "Gallery",
+    "university": "University",
+    "hospital": "Hospital",
+    "playground": "Playground",
+    "playground_6y_public": "Playground 6y Public",
+    "playground_6y_private": "Playground 6y Private",
+    "playground_6-12y_public": "Playground 6-12y Public",
+    "playground_6-12y_private": "Playground 6-12y Private",
+    "playground_12y_public": "Playground 12y Public",
+    "playground_12y_private": "Playground 12y Private",
+    "population": "Population",
+    "recreationAreas": "Recreation Areas",
+    "park": "Park",
+    "forest": "Forest",
+    "heath_scrub": "Heath and Scrub",
+    "lake": "Lake",
+    "river": "River",
+    "governmentandsec": "Gov. and Security",
+    "notary": "Notary",
+    "cade": "CADE",
+    "police": "Police",
+    "sports": "Sports",
+    "community_sports_center": "Community Sports Center",
+    "waterpark": "Water Park",
+    "discount_gym": "Discount Gym",
+    "gym": "Gym",
+    "soccer":"Soccer",
+    "basketball":"Basketball",
+    "allwetterplatz":"Allwetterplatz",
+    "tennis":"Tennis",
+    "bike_trail": "Bike trail", 
+    "baseball": "Baseball",   
+    "yoga":"Yoga",
+    "outdoor_fitness_station": "Outdoor fitness station"
+  },
+  "$vuetify": {
+    "close": "Close",
+    "dataIterator": {
+      "pageText": "{0}-{1} of {2}",
+      "noResultsText": "No matching records found",
+      "loadingText": "Loading items..."
+    },
+    "dataTable": {
+      "itemsPerPageText": "Rows per page:",
+      "ariaLabel": {
+        "sortDescending": ": Sorted descending. Activate to remove sorting.",
+        "sortAscending": ": Sorted ascending. Activate to sort descending.",
+        "sortNone": ": Not sorted. Activate to sort ascending."
+      }
+    },
+    "dataFooter": {
+      "pageText": "{0}-{1} of {2}",
+      "itemsPerPageText": "Items per page:",
+      "itemsPerPageAll": "All",
+      "nextPage": "Next page",
+      "prevPage": "Previous page",
+      "firstPage": "First page",
+      "lastPage": "Last page"
+    },
+    "datePicker": {
+      "itemsSelected": "{0} selected"
+    },
+    "noDataText": "No data available",
+    "carousel": {
+      "prev": "Previous visual",
+      "next": "Next visual"
+    },
+    "calendar": {
+      "moreEvents": "{0} more"
+    }
+  },
+  "common": {
+    "required": "This information is required"
+  },
+  "dynamicFields": {
+    "attributes": {
+      "ways": {
+        "way_type": "Way type",
+        "surface": "Surface",
+        "wheelchair": "Wheelchair"
+      },
+      "pois": {
+        "amenity": "Amenity",
+        "name": "Name (Optional)",
+        "opening_hours": "Opening Hours (Optional)"
+      },
+      "buildings": {
+        "building": "Building Type",
+        "building_levels": "Building Levels",
+        "building_levels_residential": "Building levels residential",
+        "population": "Number residents (optional)",
+        "gross_floor_area": "Gross Floor Area (optional)",
+        "labels": {
+          "area": "Area",
+          "building_levels": "Building levels",
+          "gross_floor_area": "Gross Floor Area",
+          "population": "Population"
+        }
+      }
+    },
+    "listValues": {
+      "ways": {
+        "road": "Road",
+        "bridge": "Bridge",
+        "asphalt": "Asphalt",
+        "cobblestone": "Cobblestone",
+        "fine_gravel": "Fine gravel",
+        "gravel": "Gravel",
+        "grass": "Grass",
+        "unpaved": "Unpaved",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "buildings": {
+        "residential": "Residential",
+        "commercial": "Commercial",
+        "public": "Public"
+      }
+    }
+  },
+  "openingHours": {
+    "openingTime": "Opening Time",
+    "closingTime": "Closing Time",
+    "default": "Default",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "publicHolidays": "Public Holidays"
+  },
+  "charts": {
+    "indicators": {
+      "sidewalk_quality": "Walking Comfort",
+      "traffic_protection": "Protection from traffic impacts",
+      "security": "Security",
+      "vegetation": "Vegetation",
+      "water": "Water",
+      "green_blue_index": "Vegetation & Water",
+      "liveliness": "Walking environment",
+      "data_quality": "Data Quality",
+      "comfort": "Comfort",
+      "walkability": ["TOTAL WALKABILITY SCORE"],
+      "scale_label_indicators": "Indicators",
+      "scale_label_index": "Index",
+
+      "sidewalk": "Sidewalk availability",
+      "width": "Sidewalk width",
+      "smoothness": "Smoothness",
+      "surface": "Surface",
+      "wheelchair_classified": "Wheelchair suitability",
+      "lanes": "Number of lanes",
+      "oneway": "Oneway",
+      "maxspeed": "Maxspeed",
+      "parking": "Parking",
+      "cnt_accidents": "Number of pedestrian accidents",
+      "noise_day": "Noise level - day",
+      "noise_night": "Noise level - night",
+      "lit_classified": "Illuminance",
+      "landuse": "Landuse",
+      "cnt_pois": "POI density",
+      "cnt_population": "Population density",
+      "cnt_benches": "Number of benches",
+      "cnt_waste_baskets": "Number of waste baskets",
+      "cnt_toilets": "Number of toilets",
+      "cnt_fountains": "Number of fountains"
+    }
+  }
+}
