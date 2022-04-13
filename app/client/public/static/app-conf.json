@@ -1886,7 +1886,63 @@
               "icon": "playground",
               "weight": 1,
               "sensitivity": 300000
-            }
+            },
+            {
+              "name": "Playground 6y public",
+              "value": "playground_6y_public",
+              "icon": "playground_6y_public",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Playground 6y private",
+              "value": "playground_6y_private",
+              "icon": "playground_6y_private",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Playground 6-11y public",
+              "value": "playground_6-11y_public",
+              "icon": "playground_6-11y_public",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Playground 6-11y private",
+              "value": "playground_6-11y_private",
+              "icon": "playground_6-11y_private",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Playground 12y public",
+              "value": "playground_12y_public",
+              "icon": "playground_12y_public",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Playground 12y private",
+              "value": "playground_12y_private",
+              "icon": "playground_12y_private",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Mini playgrounds public",
+              "value": "mini_playgrounds_public",
+              "icon": "mini_playgrounds_public",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Mini playgrounds private",
+              "value": "mini_playgrounds_private",
+              "icon": "mini_playgrounds_private",
+              "weight": 1,
+              "sensitivity": 300000
+            }          
           ]
         },
         {
@@ -1925,6 +1981,54 @@
               "name": "Yoga",
               "value": "yoga",
               "icon": "yoga",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            { "name": "Soccer",
+              "value": "soccer",
+              "icon": "soccer",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Basketball",
+              "value": "basketball",
+              "icon": "basketball",
+              "weight": 1,
+              "sensitivity": 300000
+            },     
+            {
+              "name": "Tennis",
+              "value": "tennis",
+              "icon": "tennis",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Bike trail",
+              "value": "bike_trail",
+              "icon": "bike_trail",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Baseball",
+              "value": "baseball",
+              "icon": "baseball",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Skateboard",
+              "value": "skateboard",
+              "icon": "skateboard",
+              "weight": 1,
+              "sensitivity": 300000
+            },
+            {
+              "name": "Beachvolleyball",
+              "value": "beachvolleyball",
+              "icon": "beachvolleyball",
               "weight": 1,
               "sensitivity": 300000
             }
